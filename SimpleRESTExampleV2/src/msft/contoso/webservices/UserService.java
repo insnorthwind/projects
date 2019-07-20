@@ -1,4 +1,4 @@
-package com.dbs.id.webservices;
+package msft.contoso.webservices;
 
 import java.io.IOException;
 import java.util.List;

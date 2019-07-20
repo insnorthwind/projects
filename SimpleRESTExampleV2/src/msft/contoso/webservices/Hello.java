@@ -1,4 +1,4 @@
-package com.dbs.id.webservices;
+package msft.contoso.webservices;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.PUT;
