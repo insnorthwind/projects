@@ -1,0 +1,42 @@
+{"id":3,"name":"bangsat","role":"Cabo cibai"}
+{"id":4,"name":"babi","role":"Acing bajingan"}
+{"id":5,"name":"perek","role":"Dasar pelacur"}
+{"id":6,"name":"monyet","role":"Kepala monyet"}
+{"id":7,"name":"sialan","role":"Ngentot"}
+{"id":8,"name":"pelacur","role":"Murahan"}
+{"id":9,"name":"binal","role":"Goblok"}
+{"id":10,"name":"bangsat1","role":"Cabo cibai"}
+{"id":11,"name":"babi1","role":"Acing bajingan"}
+{"id":12,"name":"perek1","role":"Dasar pelacur"}
+{"id":13,"name":"monyet1","role":"Kepala monyet"}
+{"id":14,"name":"sialan1","role":"Ngentot"}
+{"id":15,"name":"pelacur1","role":"Murahan"}
+{"id":16,"name":"binal1","role":"Goblok"}
+{"id":17,"name":"bangsat2","role":"Cabo cibai"}
+{"id":18,"name":"babi2","role":"Acing bajingan"}
+{"id":19,"name":"perek2","role":"Dasar pelacur"}
+{"id":20,"name":"monyet2","role":"Kepala monyet"}
+{"id":21,"name":"sialan2","role":"Ngentot"}
+{"id":22,"name":"pelacur2","role":"Murahan"}
+{"id":23,"name":"binal2","role":"Goblok"}
+{"id":24,"name":"bangsat3","role":"Cabo cibai"}
+{"id":25,"name":"babi3","role":"Acing bajingan"}
+{"id":26,"name":"perek3","role":"Dasar pelacur"}
+{"id":27,"name":"monyet3","role":"Kepala monyet"}
+{"id":28,"name":"sialan3","role":"Ngentot"}
+{"id":29,"name":"pelacur3","role":"Murahan"}
+{"id":30,"name":"binal3","role":"Goblok"}
+{"id":31,"name":"bangsat4","role":"Cabo cibai"}
+{"id":32,"name":"babi4","role":"Acing bajingan"}
+{"id":33,"name":"perek4","role":"Dasar pelacur"}
+{"id":34,"name":"monyet4","role":"Kepala monyet"}
+{"id":35,"name":"sialan4","role":"Ngentot"}
+{"id":36,"name":"pelacur4","role":"Murahan"}
+{"id":37,"name":"binal4","role":"Goblok"}
+{"id":38,"name":"bangsat5","role":"Cabo cibai"}
+{"id":39,"name":"babi5","role":"Acing bajingan"}
+{"id":40,"name":"perek5","role":"Dasar pelacur"}
+{"id":41,"name":"monyet5","role":"Kepala monyet"}
+{"id":42,"name":"sialan5","role":"Ngentot"}
+{"id":43,"name":"pelacur5","role":"Murahan"}
+{"id":44,"name":"binal5","role":"Goblok"}
