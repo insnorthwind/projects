@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Use this file to deploy some handlers/chains and services      --><!-- Two ways to do this:                                           --><!--   java org.apache.axis.client.AdminClient deploy.wsdd          --><!--      after the axis server is running                          --><!-- or                                                             --><!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   --><!--      from the same directory that the Axis engine runs         --><deployment xmlns="http://xml.apache.org/axis/wsdd/" xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from AccountServiceImplService WSDL service -->
+
+  <service name="AccountServiceImpl" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://service.webservices.contoso.msft"/>
+      <parameter name="wsdlServiceElement" value="AccountServiceImplService"/>
+      <parameter name="schemaQualified" value="http://service.webservices.contoso.msft,http://beans.webservices.contoso.msft"/>
+      <parameter name="wsdlServicePort" value="AccountServiceImpl"/>
+      <parameter name="className" value="msft.contoso.webservices.service.AccountServiceImpl"/>
+      <parameter name="wsdlPortType" value="AccountServiceImpl"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation xmlns:operNS="http://service.webservices.contoso.msft" xmlns:retNS="http://service.webservices.contoso.msft" xmlns:rtns="http://beans.webservices.contoso.msft" name="getAccount" qname="operNS:getAccount" returnQName="retNS:getAccountReturn" returnType="rtns:Account" soapAction="">
+        <parameter xmlns:pns="http://service.webservices.contoso.msft" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:name" type="tns:string"/>
+      </operation>
+      <operation xmlns:operNS="http://service.webservices.contoso.msft" xmlns:retNS="http://service.webservices.contoso.msft" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="addAccount" qname="operNS:addAccount" returnQName="retNS:addAccountReturn" returnType="rtns:boolean" soapAction="">
+        <parameter xmlns:pns="http://service.webservices.contoso.msft" xmlns:tns="http://beans.webservices.contoso.msft" qname="pns:a" type="tns:Account"/>
+      </operation>
+      <operation xmlns:operNS="http://service.webservices.contoso.msft" xmlns:retNS="http://service.webservices.contoso.msft" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="deleteAccount" qname="operNS:deleteAccount" returnQName="retNS:deleteAccountReturn" returnType="rtns:boolean" soapAction="">
+        <parameter xmlns:pns="http://service.webservices.contoso.msft" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:name" type="tns:string"/>
+      </operation>
+      <operation xmlns:operNS="http://service.webservices.contoso.msft" xmlns:retNS="http://service.webservices.contoso.msft" xmlns:rtns="http://beans.webservices.contoso.msft" name="getAllAccounts" qname="operNS:getAllAccounts" returnQName="retNS:getAllAccountsReturn" returnType="rtns:Account" soapAction="">
+      </operation>
+      <parameter name="allowedMethods" value="getAllAccounts getAccount addAccount deleteAccount"/>
+
+      <typeMapping xmlns:ns="http://beans.webservices.contoso.msft" qname="ns:Account" type="java:msft.contoso.webservices.beans.Account" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle=""/>
+  </service>
+</deployment>

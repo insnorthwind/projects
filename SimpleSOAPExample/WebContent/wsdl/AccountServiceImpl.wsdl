@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://service.webservices.contoso.msft" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://service.webservices.contoso.msft" xmlns:intf="http://service.webservices.contoso.msft" xmlns:tns1="http://beans.webservices.contoso.msft" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://service.webservices.contoso.msft" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://beans.webservices.contoso.msft"/>
+   <element name="getAccount">
+    <complexType>
+     <sequence>
+      <element name="name" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getAccountResponse">
+    <complexType>
+     <sequence>
+      <element name="getAccountReturn" type="tns1:Account"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="addAccount">
+    <complexType>
+     <sequence>
+      <element name="a" type="tns1:Account"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="addAccountResponse">
+    <complexType>
+     <sequence>
+      <element name="addAccountReturn" type="xsd:boolean"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="deleteAccount">
+    <complexType>
+     <sequence>
+      <element name="name" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="deleteAccountResponse">
+    <complexType>
+     <sequence>
+      <element name="deleteAccountReturn" type="xsd:boolean"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getAllAccounts">
+    <complexType/>
+   </element>
+   <element name="getAllAccountsResponse">
+    <complexType>
+     <sequence>
+      <element maxOccurs="unbounded" name="getAllAccountsReturn" type="tns1:Account"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+  <schema elementFormDefault="qualified" targetNamespace="http://beans.webservices.contoso.msft" xmlns="http://www.w3.org/2001/XMLSchema">
+   <complexType name="Account">
+    <sequence>
+     <element name="name" nillable="true" type="xsd:string"/>
+     <element name="owner" nillable="true" type="xsd:string"/>
+     <element name="role" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="getAllAccountsRequest">
+
+      <wsdl:part element="impl:getAllAccounts" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="deleteAccountRequest">
+
+      <wsdl:part element="impl:deleteAccount" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="deleteAccountResponse">
+
+      <wsdl:part element="impl:deleteAccountResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="addAccountRequest">
+
+      <wsdl:part element="impl:addAccount" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getAccountResponse">
+
+      <wsdl:part element="impl:getAccountResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="addAccountResponse">
+
+      <wsdl:part element="impl:addAccountResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getAllAccountsResponse">
+
+      <wsdl:part element="impl:getAllAccountsResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getAccountRequest">
+
+      <wsdl:part element="impl:getAccount" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="AccountServiceImpl">
+
+      <wsdl:operation name="getAccount">
+
+         <wsdl:input message="impl:getAccountRequest" name="getAccountRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getAccountResponse" name="getAccountResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="addAccount">
+
+         <wsdl:input message="impl:addAccountRequest" name="addAccountRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:addAccountResponse" name="addAccountResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="deleteAccount">
+
+         <wsdl:input message="impl:deleteAccountRequest" name="deleteAccountRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:deleteAccountResponse" name="deleteAccountResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getAllAccounts">
+
+         <wsdl:input message="impl:getAllAccountsRequest" name="getAllAccountsRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getAllAccountsResponse" name="getAllAccountsResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="AccountServiceImplSoapBinding" type="impl:AccountServiceImpl">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="getAccount">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getAccountRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getAccountResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="addAccount">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="addAccountRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="addAccountResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="deleteAccount">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="deleteAccountRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="deleteAccountResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getAllAccounts">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getAllAccountsRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getAllAccountsResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="AccountServiceImplService">
+
+      <wsdl:port binding="impl:AccountServiceImplSoapBinding" name="AccountServiceImpl">
+
+         <wsdlsoap:address location="http://localhost:8080/SimpleSOAPExample/services/AccountServiceImpl"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>
